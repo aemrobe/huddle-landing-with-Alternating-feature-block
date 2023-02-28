@@ -1,3 +1,4 @@
+/*font families*/
 @font-face {
   font-family: "poppins-semibold";
   src: url(./font-family/poppins/Poppins-SemiBold.ttf);
@@ -13,12 +14,19 @@
   src: url(./font-family/openSans/static/OpenSans/OpenSans-Regular.ttf);
 }
 
+@font-face {
+  font-family: "poppins-regular";
+  src: url(./font-family/poppins/Poppins-Regular.ttf);
+}
+
+/*custom variables*/
 :root {
   --pink: hsl(322, 100%, 66%);
   --Very-Pale-Cyan: hsl(193, 100%, 96%);
   --Very-Dark-Cyan: hsl(192, 100%, 9%);
   --Grayish-Blue: hsl(208, 11%, 55%);
   --font-ff-poppin-semibold: "poppins-semibold";
+  --font-ff-poppin-regular: "poppins-regular";
   --font-ff-openSans-regular: "opensans-regular";
   --font-ff-openSans-bold: "opensans-bold";
 }
@@ -43,11 +51,12 @@ body {
   font-size: 18px;
   font-family: var(--font-ff-openSans-regular);
   color: var(--Very-Pale-Cyan);
+  min-height: 100vh;
 }
 
+/*header*/
 header {
   padding-bottom: 3.4rem;
-  border: 2px solid lime;
   background-image: url("./images/bg-hero-mobile.svg");
   background-color: var(--Very-Pale-Cyan);
 }
@@ -65,6 +74,7 @@ header {
   margin-top: 3px;
 }
 
+/*try for free button*/
 .try-btn {
   color: var(--Very-Dark-Cyan);
   background: white;
@@ -98,6 +108,7 @@ header {
   margin-bottom: 3.2rem;
 }
 
+/*get Started button*/
 .get-started-btn {
   border-radius: 20px;
   background: var(--pink);
@@ -110,7 +121,7 @@ header {
   max-width: 24rem;
   margin: 0 auto 5.3rem;
   font-size: 1.2rem;
-  padding: 1rem 2.1rem 1.2rem;
+  padding: 1.1rem 2.1rem 1.4rem;
 }
 
 .device-img {
@@ -122,14 +133,181 @@ header {
 
 /*Grow Together card*/
 .card {
-  border: 2px solid red;
-  margin: 6rem 1.5rem 0;
+  box-shadow: 0 0 10px rgba(128, 141, 153, 0.2);
+  border-radius: 18px;
+  color: var(--Very-Dark-Cyan);
+  margin: 6rem 2.2rem 0;
+  padding-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card img {
   display: block;
   width: 70%;
-  margin: 5.2rem auto;
+  margin-bottom: 5.5rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-family: var(--font-ff-poppin-semibold);
+  margin-bottom: 1.3rem;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  width: 80%;
+  line-height: 1.5;
+  margin-bottom: 3.1rem;
+}
+
+/*flowing conversation card*/
+.card:nth-child(2) {
+  margin-top: 4rem;
+  padding-top: 6.7rem;
+}
+
+.card:nth-child(2) img {
+  margin-bottom: 7rem;
+}
+
+.card:nth-child(2) .card-text {
+  margin-bottom: 5.1rem;
+  width: 78%;
+}
+
+/*your users card*/
+.card:nth-child(3) {
+  margin-top: 4rem;
+  padding-top: 6.4rem;
+}
+
+.card:nth-child(3) img {
+  width: 73%;
+  margin-bottom: 6.2rem;
+}
+
+.card:nth-child(3) .card-title {
+  margin-bottom: 1.5rem;
+}
+
+.card:nth-child(3) .card-text {
+  width: 73%;
+}
+
+/*footer*/
+footer {
+  position: relative;
+  border: 2px solid black;
+  background: var(--Very-Dark-Cyan);
+  margin-top: 23rem;
+  padding: 13.2rem 1.5rem 0;
+}
+
+/*ready-for-community card"*/
+.ready-for-community {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateY(-63%);
+  width: 94%;
+  margin: 0 auto;
+  padding: 4.1rem 1.5rem 0;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(128, 141, 153, 0.2);
+  background: white;
+  color: var(--Very-Dark-Cyan);
+  font-size: 1.2rem;
+  font-family: var(--font-ff-poppin-semibold);
+}
+
+.ready-for-community h2 {
+  margin-bottom: 2.4rem;
+}
+
+.ready-for-community a {
+  font-size: 1rem;
+  padding: 1.1rem 2.1rem 1.4rem;
+  margin-bottom: 4.3rem;
+}
+
+footer .logo {
+  height: 2.7rem;
+  width: 16.5rem;
+  margin-bottom: 2.2rem;
+}
+
+/*contact information*/
+.contact {
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.contact-img {
+  margin-top: 0.5rem;
+}
+
+.contact-text {
+  color: var(--Very-Pale-Cyan);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 86%;
+}
+
+.contact:nth-child(2),
+.contact:nth-child(3) {
+  gap: 2rem;
+}
+
+/*footer links*/
+.footer-links {
+  margin-top: 4.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: var(--Very-Pale-Cyan);
+  text-decoration: none;
+  font-size: 1.75rem;
+  margin: 1rem 0;
+}
+
+/*social-media-icons*/
+.social-media-icons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.social-media-icon {
+  border: 1px solid var(--Very-Pale-Cyan);
+  border-radius: 50%;
+  color: var(--Very-Pale-Cyan);
+  font-size: 1.45rem;
+  padding: 4px 8px;
+}
+
+.social-media-icon:nth-child(1) {
+  padding: 5px 10px;
+}
+
+/*copyright*/
+.copyright {
+  font-size: 1.1rem;
+  margin-top: 2.15rem;
+  margin-bottom: 4rem;
+  color: var(--Very-Pale-Cyan);
+  font-family: var(--font-ff-poppin-regular);
+  text-align: center;
 }
 
 .attribution {
