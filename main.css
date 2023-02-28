@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "poppins-semibold";
+  src: url(./font-family/poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "opensans-bold";
+  src: url(./font-family/openSans/static/OpenSans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "opensans-regular";
+  src: url(./font-family/openSans/static/OpenSans/OpenSans-Regular.ttf);
+}
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --font-ff-poppin-semibold: "poppins-semibold";
+  --font-ff-openSans-regular: "opensans-regular";
+  --font-ff-openSans-bold: "opensans-bold";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--font-ff-openSans-regular);
+  color: var(--Very-Pale-Cyan);
+}
+
+header {
+  padding-bottom: 3.4rem;
+  border: 2px solid lime;
+  background-image: url("./images/bg-hero-mobile.svg");
+  background-color: var(--Very-Pale-Cyan);
+}
+
+.top {
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 78px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 1.6rem;
+  width: 10.3rem;
+  margin-top: 3px;
+}
+
+.try-btn {
+  color: var(--Very-Dark-Cyan);
+  background: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--font-ff-openSans-bold);
+  border-radius: 12px;
+  width: 10rem;
+  margin-bottom: 8px;
+  padding: 0.45rem 0;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+  color: var(--Very-Dark-Cyan);
+  font-size: 2.4rem;
+  font-family: var(--font-ff-poppin-semibold);
+  text-align: center;
+  padding: 0 5rem;
+  line-height: 1.5;
+}
+
+.text {
+  color: var(--Very-Dark-Cyan);
+  font-family: var(--font-ff-openSans-regular);
+  font-size: 1.6rem;
+  padding: 0 3.5rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.get-started-btn {
+  border-radius: 20px;
+  background: var(--pink);
+  color: var(--Very-Pale-Cyan);
+  font-family: var(--font-ff-openSans-bold);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 64%;
+  max-width: 24rem;
+  margin: 0 auto 5.3rem;
+  font-size: 1.2rem;
+  padding: 1rem 2.1rem 1.2rem;
+}
+
+.device-img {
+  display: block;
+  width: 80%;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+/*Grow Together card*/
+.card {
+  border: 2px solid red;
+  margin: 6rem 1.5rem 0;
+}
+
+.card img {
+  display: block;
+  width: 70%;
+  margin: 5.2rem auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
