@@ -54,10 +54,17 @@ body {
   min-height: 100vh;
 }
 
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 /*header*/
 header {
   padding-bottom: 3.4rem;
   background-image: url("./images/bg-hero-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--Very-Pale-Cyan);
 }
 
@@ -89,7 +96,8 @@ header {
 }
 
 .title {
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 647px;
   color: var(--Very-Dark-Cyan);
   font-size: 2.4rem;
   font-family: var(--font-ff-poppin-semibold);
@@ -105,10 +113,21 @@ header {
   padding: 0 3.5rem;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: 3.2rem;
+  max-width: 647px;
+  margin: 0 auto 3.2rem;
 }
 
 /*get Started button*/
+.get-started-btn,
+.try-btn {
+  transition: opacity 0.5s ease;
+}
+
+.get-started-btn:hover,
+.try-btn:hover {
+  opacity: 0.5;
+}
+
 .get-started-btn {
   border-radius: 20px;
   background: var(--pink);
@@ -127,14 +146,23 @@ header {
 .device-img {
   display: block;
   width: 80%;
-  max-width: 30rem;
+  max-width: 51.8rem;
   margin: 0 auto;
+}
+
+/*main element*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /*Grow Together card*/
 .card {
   box-shadow: 0 0 10px rgba(128, 141, 153, 0.2);
   border-radius: 18px;
+  max-width: 400px;
   color: var(--Very-Dark-Cyan);
   margin: 6rem 2.2rem 0;
   padding-top: 5.5rem;
@@ -147,6 +175,12 @@ header {
   display: block;
   width: 70%;
   margin-bottom: 5.5rem;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-title {
@@ -201,7 +235,6 @@ header {
 /*footer*/
 footer {
   position: relative;
-  border: 2px solid black;
   background: var(--Very-Dark-Cyan);
   margin-top: 23rem;
   padding: 13.2rem 1.5rem 0;
@@ -215,6 +248,7 @@ footer {
   left: 0;
   transform: translateY(-63%);
   width: 94%;
+  max-width: 434px;
   margin: 0 auto;
   padding: 4.1rem 1.5rem 0;
   border-radius: 12px;
@@ -248,6 +282,10 @@ footer .logo {
   display: flex;
   align-items: flex-start;
   gap: 2.5rem;
+}
+
+.contact:nth-child(1) {
+  max-width: 346px;
 }
 
 .contact-img {
@@ -294,8 +332,13 @@ footer .logo {
   color: var(--Very-Pale-Cyan);
   font-size: 1.45rem;
   padding: 4px 8px;
+  transition: color 0.5s ease, border-color 0.5s ease;
 }
 
+.social-media-icon:hover {
+  color: var(--pink);
+  border-color: var(--pink);
+}
 .social-media-icon:nth-child(1) {
   padding: 5px 10px;
 }
@@ -317,4 +360,252 @@ footer .logo {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/*media queries*/
+@media (min-width: 650px) {
+  footer .wrapper {
+    max-width: 1202px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  footer .logo,
+  .social-media-icons,
+  .attribution,
+  .copyright {
+    grid-column: 1 / -1;
+  }
+
+  .footer-links {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: start;
+    grid-gap: 2rem;
+  }
+
+  .footer-link {
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 930px) {
+  header .wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0 3rem;
+  }
+
+  .top {
+    grid-column: 1 / -1;
+  }
+
+  .description {
+    max-width: 633px;
+    margin-left: auto;
+    margin-top: 7rem;
+  }
+
+  .title {
+    max-width: unset;
+  }
+
+  .text {
+    max-width: unset;
+  }
+
+  .device-img {
+    width: 100%;
+    min-width: 300px;
+    max-width: 573px;
+    margin: 0 auto 0 0;
+  }
+
+  .card:nth-child(1) {
+    margin-top: 40px;
+  }
+
+  .contact:nth-child(1) {
+    max-width: 410px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 18px;
+    font-family: var(--font-ff-openSans-regular);
+    color: var(--Very-Pale-Cyan);
+    min-height: 100vh;
+  }
+
+  header {
+    background-image: url("./images/bg-hero-desktop.svg");
+    padding-bottom: 5rem;
+  }
+
+  header .wrapper {
+    grid-gap: 0 8rem;
+  }
+
+  .top {
+    padding: 4.5rem 11rem 0;
+  }
+
+  .logo {
+    height: 2.6rem;
+    width: 15.3rem;
+  }
+
+  /*try for free button*/
+  .try-btn {
+    padding: 1rem 0;
+    width: 18rem;
+    font-size: 1.3rem;
+    border-radius: 20px;
+  }
+
+  .description {
+    padding-left: 20px;
+    margin-top: 10rem;
+    max-width: 480px;
+  }
+
+  .title {
+    text-align: left;
+    padding: 0;
+    font-size: 3.3rem;
+    max-width: 420px;
+    margin: 0 auto 4rem 0;
+  }
+
+  .text {
+    text-align: left;
+    padding: 0;
+  }
+
+  header .get-started-btn {
+    margin: 0 auto 5.3rem 0;
+    font-size: 1.5rem;
+    padding: 1.3rem 3.8rem 1.6rem;
+    border-radius: 25px;
+  }
+
+  .device-img {
+    max-width: unset;
+    width: 680px;
+    height: 485px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 1236px;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 120px;
+    padding-right: 45px;
+  }
+
+  .card-description {
+    order: -1;
+    align-items: flex-start;
+  }
+
+  .card-title {
+    font-size: 3rem;
+  }
+
+  .card-text {
+    width: unset !important;
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
+  .card img {
+    width: 386px !important;
+    height: 329px !important;
+    margin-left: 185px !important;
+  }
+
+  .card:nth-child(2) .card-description {
+    order: 0;
+  }
+
+  .card:nth-child(2) img {
+    margin-left: unset !important;
+    margin-right: 185px !important;
+  }
+
+  /*footer*/
+  footer {
+    margin-top: 34rem;
+  }
+
+  /*ready-for-community card"*/
+  .ready-for-community {
+    font-size: 1.8rem;
+    max-width: 79.9rem;
+    padding: 7.6rem 1.5rem 0;
+    border-radius: 15px;
+  }
+
+  .ready-for-community h2 {
+    margin-bottom: 3.5rem;
+  }
+
+  .ready-for-community a {
+    margin-bottom: 4.8rem;
+    padding: 2.8rem 1.8rem 2.6rem;
+    width: 35rem;
+    max-width: unset;
+    font-size: 1.5rem;
+    border-radius: 45px;
+  }
+
+  footer {
+    padding: 18rem 11.9rem 0;
+  }
+
+  footer .wrapper {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  footer .logo,
+  .social-media-icons,
+  .attribution,
+  .copyright {
+    grid-column: 1 / -1;
+  }
+
+  footer .logo {
+    width: 24rem;
+    height: 3.9rem;
+    margin-bottom: 3.8rem;
+  }
+
+  .social-media-icons {
+    margin-top: 0;
+    grid-column: span 1 / -1;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+  }
+
+  .footer-link {
+    margin: 0 !important;
+  }
+
+  /*copyright*/
+  .copyright {
+    justify-self: end;
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+  }
 }
