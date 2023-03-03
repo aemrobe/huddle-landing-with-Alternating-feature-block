@@ -166,6 +166,8 @@ main {
   color: var(--Very-Dark-Cyan);
   margin: 6rem 2.2rem 0;
   padding-top: 5.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,6 +189,7 @@ main {
   font-size: 2rem;
   font-family: var(--font-ff-poppin-semibold);
   margin-bottom: 1.3rem;
+  text-align: center;
 }
 
 .card-text {
