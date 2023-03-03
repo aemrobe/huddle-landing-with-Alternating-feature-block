@@ -513,6 +513,10 @@ footer .logo {
     padding-right: 45px;
   }
 
+  .card:nth-child(1) {
+    margin-top: 156px;
+  }
+
   .card-description {
     order: -1;
     align-items: flex-start;

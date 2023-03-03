@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/responsive-huddle-page-with-css-flexbos-and-grid-xSXbhgJf11)
+- Live Site URL: [live site URL](https://aemrobe.github.io/huddle-landing-with-Alternating-feature-block/)
 
 ## My process
 
